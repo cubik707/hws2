@@ -32,7 +32,7 @@ const Stand = () => {
                             setError(
                                 stateForAllInputs.trim()
                                     ? ''
-                                    : 'Error'
+                                    : ('Error')
                             )
                             setValue('')
                         }}

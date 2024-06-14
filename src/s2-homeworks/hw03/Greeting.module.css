@@ -22,8 +22,7 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
-    max-width: 372px;
-    width: 100%;
+    width: 372px;
     padding: 8px 0 8px 12px;
     border: 1px solid rgb(209, 209, 209);
     border-radius: 5px;
@@ -34,10 +33,14 @@
 }
 
 .errorInput {
+    width: 372px;
+    padding: 8px 0 8px 12px;
     border: 1px solid rgb(204, 0, 0);
     border-radius: 5px;
-    padding: 8px 0 8px 12px;
     outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
 }
 
 .button {
