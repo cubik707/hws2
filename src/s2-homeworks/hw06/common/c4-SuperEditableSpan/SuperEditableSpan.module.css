@@ -1,11 +1,22 @@
 .spanBlock {
+    display: flex;
+    gap: 24px;
 }
 
 .span {
+    color: rgb(0, 102, 204);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
 }
 
 .input {
+    padding: 8px 24px 8px;
+    box-sizing: border-box;
+    outline: 1px solid rgb(209, 209, 209);
+    border-radius: 5px;
 }
 
 .pen {
+    cursor: pointer;
 }
