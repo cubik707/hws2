@@ -1,8 +1,18 @@
 .container {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 42px
 }
 
 .wrapper {
+    display: flex;
+    gap: 13px;
+    align-items: center;
 }
 
 .number {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
 }

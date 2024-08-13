@@ -5,7 +5,40 @@ const SuperRange: React.FC<SliderProps> = (props) => {
     return (
         <Slider
             sx={{ // стили для слайдера // пишет студент
-                
+                // Стили для общей полосы
+                '& .MuiSlider-track': {
+                    backgroundColor: '#00CC22',
+                    height: 4,
+                    border: 0,
+                },
+                // Стили для неактивной полосы
+                '& .MuiSlider-rail': {
+                    backgroundColor: '#8B8B8B',
+                    height: 4,
+                },
+                // Стили для ползунка
+                '& .MuiSlider-thumb': {
+                    height: 20,
+                    width: 20,
+                    backgroundColor: '#fff',
+                    border: '1px solid #00CC22',
+                    '&:focus, &:hover, &.Mui-active': {
+                        boxShadow: '0px 0px 3px 1px rgba(0, 0, 0, 0.1)',
+                    },
+                    '&:before': {
+                        content: '""', // важно для отображения псевдоэлемента
+                        position: 'absolute',
+                        left: '50%',
+                        top: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        width: 6,
+                        height: 6,
+                        backgroundColor: '#00CC22', // цвет зеленого кружка
+                        borderRadius: '50%', // делает кружок круглым
+                        boxShadow:
+                            '0px 0px 1px 0px rgba(0,0,0,0), 0px 0px 0px 0px rgba(0,0,0,0), 0px 0px 1px 0px rgba(0,0,0,0)',
+                    },
+                },
             }}
             {...props} // отдаём слайдеру пропсы если они есть (value например там внутри)
         />
