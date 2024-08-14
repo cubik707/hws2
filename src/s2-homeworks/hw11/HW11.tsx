@@ -17,12 +17,17 @@ function HW11() {
 
     const change = (event: Event, value: number | number[]) => {
         // пишет студент // если пришёл массив - сохранить значения в оба useState, иначе в первый
-        if(Array.isArray(value)){
-            value.forEach(el=> Number(el))
-            setValue1(value[0])
-            setValue2(value[1])
+        if (Array.isArray(value)) {
+            const [newValue1, newValue2] = value;
+
+            if (newValue1 <= newValue2) {
+                setValue1(newValue1);
+                setValue2(newValue2);
+            }
         } else {
-            setValue1(Number(value))
+            if (value <= value2) {
+                setValue1(value);
+            }
         }
 
     }
