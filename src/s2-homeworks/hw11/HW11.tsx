@@ -20,14 +20,14 @@ function HW11() {
         if (Array.isArray(value)) {
             const [newValue1, newValue2] = value;
 
-            if (newValue1 <= newValue2) {
+            // if (newValue1 <= newValue2) {
                 setValue1(newValue1);
                 setValue2(newValue2);
-            }
+            // }
         } else {
-            if (value <= value2) {
+            // if (value <= value2) {
                 setValue1(value);
-            }
+            // }
         }
 
     }
@@ -54,8 +54,8 @@ function HW11() {
                         <span id={'hw11-value-1'} className={s.number}>{value1}</span>
                         <SuperRange
                             id={'hw11-double-slider'}
-                            min={0}
-                            max={100}
+                            // min={0}
+                            // max={100}
                             value={[value1, value2]}
                             onChange={change}
                             // сделать так чтоб value1/2 изменялось // пишет студент
