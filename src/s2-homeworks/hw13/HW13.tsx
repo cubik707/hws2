@@ -43,24 +43,32 @@ const HW13 = () => {
         setInfo(res.data.info)
       })
       .catch((e) => {
+        let image, code, errorText, info;
+
         switch (e.response?.status) {
           case 400: {
-            setImage(error400)
-            setCode('Ошибка 400!')
-            break
+            image = error400;
+            code = 'Ошибка 400!';
+            break;
           }
           case 500: {
-            setImage(error500)
-            setCode('Ошибка 500!')
-            break
+            image = error500;
+            code = 'Ошибка 500!';
+            break;
           }
           default: {
-            setImage(errorUnknown)
-            setCode('Error!')
+            image = errorUnknown;
+            code = 'Error!';
+            errorText = e.message;
+            info = e.name;
+            break;
           }
         }
-        setText(e.response.data.errorText)
-        setInfo(e.response.data.info)
+
+        setImage(image);
+        setCode(code);
+        setText(errorText || e.response?.data?.errorText || '');
+        setInfo(info || e.response?.data?.info || '');
       })
   }
 
