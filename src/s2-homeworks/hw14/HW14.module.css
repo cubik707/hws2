@@ -3,5 +3,10 @@
 }
 
 .loading {
-
+  width: 372px;
+  font-weight: 300;
+  margin-top: 11px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
